@@ -269,23 +269,23 @@ export default class Sketch {
         }
 
         // Update Gradient Uniforms
-        this.uCenter.value.set(settings.centerX, settings.centerY);
-        this.uRadius.value = settings.radius;
-        this.uDistortionAmplitude.value = settings.distortionAmplitude;
-        this.uDistortionFrequency.value = settings.distortionFrequency;
+        this.uCenter?.value.set(settings.centerX, settings.centerY);
+        if (this.uRadius) this.uRadius.value = settings.radius;
+        if (this.uDistortionAmplitude) this.uDistortionAmplitude.value = settings.distortionAmplitude;
+        if (this.uDistortionFrequency) this.uDistortionFrequency.value = settings.distortionFrequency;
         this.updateAnimationSpeeds();
 
-        this.uGradientType.value = settings.gradientType === 'Noise Based Gradient' ? 0 : 1;
+        if (this.uGradientType) this.uGradientType.value = settings.gradientType === 'Noise Based Gradient' ? 0 : 1;
         const directions = ['Left to Right', 'Right to Left', 'Top to Bottom', 'Bottom to Top'];
-        this.uLinearDirection.value = directions.indexOf(settings.linearDirection || 'Left to Right');
-        this.uLinearRotation.value = settings.linearRotation !== undefined ? settings.linearRotation : 0;
-        this.uLinearScale.value.set(settings.linearScaleX || 1, settings.linearScaleY || 1);
-        this.uLinearCenter.value.set(settings.linearCenterX !== undefined ? settings.linearCenterX : 0.5, settings.linearCenterY !== undefined ? settings.linearCenterY : 0.5);
-        this.uLinearWrapMode.value = ['Clamp', 'Repeat', 'Mirror'].indexOf(settings.linearWrapMode || 'Mirror');
-        this.uGradientMidpoint.value = settings.gradientMidpoint !== undefined ? settings.gradientMidpoint : 0.5;
+        if (this.uLinearDirection) this.uLinearDirection.value = directions.indexOf(settings.linearDirection || 'Left to Right');
+        if (this.uLinearRotation) this.uLinearRotation.value = settings.linearRotation !== undefined ? settings.linearRotation : 0;
+        this.uLinearScale?.value.set(settings.linearScaleX || 1, settings.linearScaleY || 1);
+        this.uLinearCenter?.value.set(settings.linearCenterX !== undefined ? settings.linearCenterX : 0.5, settings.linearCenterY !== undefined ? settings.linearCenterY : 0.5);
+        if (this.uLinearWrapMode) this.uLinearWrapMode.value = ['Clamp', 'Repeat', 'Mirror'].indexOf(settings.linearWrapMode || 'Mirror');
+        if (this.uGradientMidpoint) this.uGradientMidpoint.value = settings.gradientMidpoint !== undefined ? settings.gradientMidpoint : 0.5;
 
         // Update LUT Texture
-        this.gradientEffect.updateTexture();
+        this.gradientEffect?.updateTexture();
 
         if (this.updateGradientVisibility) {
             this.updateGradientVisibility(settings.gradientType || 'Noise Based Gradient');

@@ -13,7 +13,7 @@ export class EffectManager {
         for (const path in modules) {
             const module = modules[path];
             // Get the first exported class from the module
-            const exportedClasses = Object.values(module).filter(v => typeof v === 'function' && typeof v.id === 'string' && v.id.endsWith('Effect'));
+            const exportedClasses = Object.values(module).filter(v => typeof v === 'function' && v.type);
             const EffectClass = exportedClasses[0];
 
             // Only instantiate if it's a valid effect plugin (has static type)
