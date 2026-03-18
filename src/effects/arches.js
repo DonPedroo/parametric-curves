@@ -41,6 +41,7 @@ const sdBezier = Fn(([pos, A, B, C]) => {
 export class ArchesEffect {
     static type = 'standard';
     static order = 40;
+    static id = 'ArchesEffect';
     static getDefaults() {
         return {
             archesEnabled: false,

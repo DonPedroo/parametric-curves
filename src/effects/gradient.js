@@ -9,6 +9,7 @@ import { BRAND_COLORS } from '../settings.js';
 export class GradientEffect {
     static type = 'generator';
     static order = 10;
+    static id = 'GradientEffect';
 
     static getDefaults() {
         return {

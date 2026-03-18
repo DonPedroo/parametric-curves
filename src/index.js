@@ -96,7 +96,7 @@ export default class Sketch {
         this.scene.add(this.mesh);
 
         // Post Processing Setup
-        this.postProcessing = new THREE.PostProcessing(this.renderer);
+        this.postProcessing = new THREE.RenderPipeline(this.renderer);
         this.postUniforms = this.postProcessingEffect?.uniforms;
 
         // Registry of all modular effects (Now managed via manager)

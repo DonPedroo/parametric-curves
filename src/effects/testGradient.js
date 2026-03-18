@@ -7,6 +7,7 @@ import { uniform, Fn, color, mix, vec4, vec3, float, step, fract, dot, If } from
 export class TestGradient {
     static type = 'standard';
     static order = 100;
+    static id = 'TestGradient';
 
     static getDefaults() {
         return {

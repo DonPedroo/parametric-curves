@@ -37,6 +37,7 @@ const fbm = Fn(([p_in]) => {
 export class BarkEffect {
     static type = 'standard';
     static order = 60;
+    static id = 'BarkEffect';
     constructor(sketch) {
         this.sketch = sketch;
         this.params = sketch.params;

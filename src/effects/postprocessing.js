@@ -3,6 +3,7 @@ import { uniform, vec4, vec3, Fn, vec2, float, fract, dot, cos, sin, cross, mix,
 export class PostProcessingEffect {
     static type = 'post';
     static order = 20;
+    static id = 'PostProcessingEffect';
     static getDefaults() {
         return {
             colorCorrectionEnabled: true,

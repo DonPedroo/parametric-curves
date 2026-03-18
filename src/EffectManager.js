@@ -20,7 +20,7 @@ export class EffectManager {
             if (EffectClass && EffectClass.type) {
                 const instance = new EffectClass(this.sketch);
                 this.effects.push(instance);
-                this.effectMap.set(EffectClass.name, instance);
+                this.effectMap.set(EffectClass.id, instance);
             }
         }
     }

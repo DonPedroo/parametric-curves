@@ -91,6 +91,7 @@ export const applyImageOverlayTSL = Fn(([inputColor, vUv, uTexture, uConfig]) =>
 export class CirclesEffect {
     static type = 'standard';
     static order = 10;
+    static id = 'CirclesEffect';
 
     static getDefaults() {
         const circleDefaults = {

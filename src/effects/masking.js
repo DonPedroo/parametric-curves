@@ -5,6 +5,7 @@ import { uniform, vec2, Fn, float, step, abs, length, clamp, int, If, sin, cos }
  * Extracts the Masking logic (Linear, 3-Way Linear, Radial) for reuse across effects.
  */
 export class MaskEffect {
+    static id = 'MaskEffect';
     static getDefaults(prefix = 'mask') {
         return {
             [`${prefix}Masked`]: false,
