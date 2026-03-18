@@ -1,6 +1,10 @@
 # Parametric Curves & Procedural Textures
 
-A high-performance WebGPU visualizer for parametric curves and organic procedural textures, built with **Three.js** and **TSL (Three Shading Language)**. This project leverages the latest GPU features to create complex, interactive, and mathematically stable visual effects.
+This project started with a simple problem: I needed to generate design elements based on parametric curves and structured patterns from client brand systems. The math is straightforward, but building and iterating on these visuals in traditional motion tools like After Effects quickly becomes slow and complicated.
+
+So instead of forcing it through legacy tools, I built a small system in code where curves, spacing, deformation, and motion are controlled directly through parameters.
+
+Parametric Curves & Procedural Textures is that tool — a lightweight engine for generating curve-based graphics and organic procedural patterns in real time.
 
 ## 🚀 Core Features
 
