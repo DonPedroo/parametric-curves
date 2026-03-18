@@ -6,6 +6,16 @@ So instead of forcing it through legacy tools, I built a small system in code wh
 
 Parametric Curves & Procedural Textures is that tool — a lightweight engine for generating curve-based graphics and organic procedural patterns in real time.
 
+<div align="center">
+  <img src="src/ref/sketch-016-Pixelated-20260316-144029.png" width="30%" />
+  <img src="src/ref/sketch-016-Pixelated-20260316-155316.png" width="30%" />
+  <img src="src/ref/sketch-016-Pixelated-20260316-205917.png" width="30%" />
+  <br />
+  <img src="src/ref/sketch-016-Pixelated-20260316-210825.png" width="30%" />
+  <img src="src/ref/sketch-016-Pixelated-20260316-212741.png" width="30%" />
+  <img src="src/ref/sketch-016-Pixelated-20260316-222255.png" width="30%" />
+</div>
+
 ## 🚀 Core Features
 
 ### 🌈 Arches Effect
