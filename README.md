@@ -16,6 +16,14 @@ Parametric Curves & Procedural Textures is that tool — a lightweight engine fo
   <img src="src/ref/sketch-016-Pixelated-20260316-222255.png" width="30%" />
 </div>
 
+<div align="center">
+  <br />
+  <a href="https://donpedroo.github.io/parametric-curves/"><strong><kbd> LIVE DEMO </kbd></strong></a>
+  <br />
+  <br />
+  <h1><a href="https://donpedroo.github.io/parametric-curves/">donpedroo.github.io/parametric-curves</a></h1>
+</div>
+
 ## 🚀 Core Features
 
 ### 🌈 Arches Effect
