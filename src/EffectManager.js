@@ -13,7 +13,7 @@ export class EffectManager {
         for (const path in modules) {
             const module = modules[path];
             // Get the first exported class from the module
-            const exportedClasses = Object.values(module).filter(v => typeof v === 'function' && v.name && v.name.endsWith('Effect'));
+            const exportedClasses = Object.values(module).filter(v => typeof v === 'function' && v.id && v.id.endsWith('Effect'));
             const EffectClass = exportedClasses[0];
 
             // Only instantiate if it's a valid effect plugin (has static type)
@@ -96,7 +96,7 @@ export class EffectManager {
             .sort((a, b) => (a.constructor.order || 0) - (b.constructor.order || 0));
 
         for (const effect of standardEffects) {
-            const enabledKey = this._getEnabledKey(effect.constructor.name);
+            const enabledKey = this._getEnabledKey(effect.constructor.id);
             if (this.sketch.params[enabledKey] !== false) {
                 currentNode = effect.buildNode(currentNode, vUv);
             }
@@ -126,8 +126,8 @@ export class EffectManager {
     /**
      * Internal helper to guess the 'enabled' parameter name (e.g., CirclesEffect -> circlesEnabled)
      */
-    _getEnabledKey(className) {
-        const base = className.replace('Effect', '');
+    _getEnabledKey(classId) {
+        const base = classId.replace('Effect', '');
         return base.charAt(0).toLowerCase() + base.slice(1) + 'Enabled';
     }
 }

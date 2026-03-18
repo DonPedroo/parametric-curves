@@ -223,9 +223,9 @@ export function setupPostGUI(sketch, postFolder) {
     // Load all other effect GUIs dynamically
     sketch.effectManager.effects.forEach(effect => {
         // Skip PostProcessingEffect as we already added it above at the top
-        if (effect.constructor.name === 'PostProcessingEffect') return;
+        if (effect.constructor.id === 'PostProcessingEffect') return;
         // Skip GradientEffect as it has its own top-level folder
-        if (effect.constructor.name === 'GradientEffect') return;
+        if (effect.constructor.id === 'GradientEffect') return;
 
         if (typeof effect.setupGUI === 'function') {
             effect.setupGUI(postFolder);
